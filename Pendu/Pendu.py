@@ -2,11 +2,24 @@ from random import choice
 
 ERREURS_POSSIBLES = 10
 SYMBOLE_MYSTERE = "-"
-ALPHABET = " ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 LONGUEUR_MINIMALE = 4
 
 
 def charge_dictionnaire ():
+    '''
+
+    Returns
+    -------
+    liste_mots : list
+        une liste qui contient des mots (str).
+        
+    Description
+    ------
+        permet de creer une liste de mots present dans un fichier .txt (un 
+        fichier externe) afin qu'il puisse etre exploiter par le programme.
+
+    '''
     liste_mots = []
     with open("dictionnaire-francais.txt", "r") as f:
         for mot in f. readlines ():
@@ -17,10 +30,27 @@ def charge_dictionnaire ():
 
 
 def genere_motifs(secret,propositions):
-    '''Cette Fonction permet de regarder si les lettres lettres rentrer par 
-    l'utilisateur sont dans le mot à trouver
-    Elle prend enparametre le mot à trouver, ainsi que les lettres que 
-    l'utilisateur à renseigner'''
+    '''
+
+    Parameters
+    ----------
+    mot_mystere : str
+        le mot mystere que le joueur doit trouver.
+    propositions : list
+        liste de lettre proposee par le joueur.
+
+    Returns
+    -------
+    motif : str
+        un mot qui contient un symbole pour les lettres qu'il n'a pas trouve 
+        et les lettres clairement affichees pour celle qu'il a trouve.
+        
+    Description
+    -------
+        genere une chaine de caractere qui represente les lettres que le 
+        joueur n'a pas encore trouvees.
+
+    '''
     motif = ""
     for i in range (0,len(secret)):
         if secret[i] in propositions:
@@ -31,10 +61,20 @@ def genere_motifs(secret,propositions):
     
 
 def partie_simple():
-    '''Cette Fonction, permet de jouer au Pendu. Elle dispose d'un system de 
-    Win/Lose celon si vous trouvr le mot ou non avant que le pendu meur
-    Elle utilise la fonction crée precedament, 
-    "genere_motif(secret,propositions)"'''
+    '''
+
+    Returns
+    -------
+    TYPE
+    bool
+        True = Partie Gagner.
+        False = Partie Perdu.
+    
+    Description
+    -------
+        lancement de la partie.
+
+    '''
     liste_mots = charge_dictionnaire()
     mot = choice(liste_mots)
     lettres_proposées = []
