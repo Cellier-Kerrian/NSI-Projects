@@ -104,5 +104,5 @@ def partie_simple():
             return False
 
 
-#Executable :
+# Lanceur
 partie_simple()
