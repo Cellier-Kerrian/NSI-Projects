@@ -1,4 +1,4 @@
-# NSI Projets| NSI Projects
+# NSI Projets | NSI Projects
 
 ## • Description :
 
