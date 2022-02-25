@@ -1,21 +1,5 @@
 # Exercices - Plus Courte Distance | Exercises - Shortest Distance
 
-## • Information :
-
-Ce projet a été fait à plusieurs, voici les personnes qui ont participé  :
-  - Dosne Gabriel
-  - Mathé Mai-ling
-  - Cellier Kerrian (moi-même)
-
----
-
-This project was done by several people, here are the people who participated:
-  - Dosne Gabriel
-  - Mathé Mai-ling
-  - Cellier Kerrian (myself)
-
-*You will not find these exercises translated into English, sorry.*
-
 ## • Description :
 
 Ce projet consiste à créer un graphe avec X points qui sont placés aléatoirement, avec un autre point qui est le centre d'un cercle.
@@ -28,8 +12,10 @@ This project consists in creating a graph with X points which are placed randoml
 The program just finds the point closest to the center of the circle, and represents it with color to make it visual.
 The graph that is created is exported in `.pnj` at the root of the folder.
 
+*You will not find these exercises translated into English, sorry.*
+
 ---
 
 ## • Exemple | Example
 
-/assets/images/graph.png
+![Image](https://github.com/Cellier-Kerrian/NSI-Projects/blob/1c5953b1febe13184d9414249ef5913ff76eacb4/Disctance-graphe/graph.png)
